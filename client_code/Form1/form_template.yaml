@@ -28,10 +28,6 @@ components:
   name: content_panel
   properties: {col_widths: '{}'}
   type: ColumnPanel
-- layout_properties: {slot: nav-right}
-  name: navbar_links
-  properties: {}
-  type: FlowPanel
 - layout_properties: {slot: title}
   name: title_box
   properties: {role: outlined, text: Feedback form}
