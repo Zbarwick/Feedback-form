@@ -1,5 +1,29 @@
 components:
-- components: []
+- components:
+  - layout_properties: {grid_position: 'YOEEVC,AKTOZN'}
+    name: name_label
+    properties: {text: 'Name:'}
+    type: Label
+  - layout_properties: {grid_position: 'YOEEVC,PNYBGJ'}
+    name: Name_entry
+    properties: {}
+    type: TextBox
+  - layout_properties: {grid_position: 'PZRMQV,NYKUCN'}
+    name: email_label
+    properties: {text: 'Email:'}
+    type: Label
+  - layout_properties: {grid_position: 'PZRMQV,SOMNXN'}
+    name: email_entry
+    properties: {}
+    type: TextBox
+  - layout_properties: {grid_position: 'YFDWFF,OJBQRW'}
+    name: Feedback_label
+    properties: {text: 'Feedback:'}
+    type: Label
+  - layout_properties: {grid_position: 'RYWVAJ,MNRZEL'}
+    name: feedback_entry
+    properties: {}
+    type: TextArea
   layout_properties: {slot: default}
   name: content_panel
   properties: {col_widths: '{}'}
@@ -8,6 +32,10 @@ components:
   name: navbar_links
   properties: {}
   type: FlowPanel
+- layout_properties: {slot: title}
+  name: title_box
+  properties: {role: outlined, text: Feedback form}
+  type: TextBox
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
