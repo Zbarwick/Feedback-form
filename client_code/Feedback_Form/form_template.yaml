@@ -24,6 +24,17 @@ components:
     name: feedback_entry
     properties: {}
     type: TextArea
+  - layout_properties: {grid_position: 'GZEAYT,GKSGPE'}
+    name: likelihood_label
+    properties: {text: 'How likely are you to recommend this to another person?'}
+    type: Label
+  - layout_properties: {grid_position: 'GZEAYT,JQAGMT'}
+    name: likelihood_dropdown
+    properties:
+      include_placeholder: false
+      items: [Very likely, Likely, Unlikely, Very Unlikely]
+      placeholder: ''
+    type: DropDown
   - layout_properties: {grid_position: 'DQSSQZ,OQYBDG'}
     name: submit_button
     properties: {role: elevated-button, text: Submit}
