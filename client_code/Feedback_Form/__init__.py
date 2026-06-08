@@ -15,7 +15,8 @@ class Feedback_Form(Feedback_FormTemplate):
     Name = self.name_entry.text
     Email = self.email_entry.text
     Feedback = self.feedback_entry.text
-    anvil.server.call('AddDetails' , Name , Email , Feedback)
+    Likelihood = self.likelihood_dropdown.selected_value
+    anvil.server.call('AddDetails' , Name , Email , Feedback , Likelihood)
     Notification("Feedback saved!").show()
     self.clear_inputs()
 

@@ -8,11 +8,12 @@ import anvil.server
 from datetime import datetime
 
 @anvil.server.callable
-def AddDetails(Name , Email , Feedback):
+def AddDetails(Name , Email , Feedback , Likelihood):
   app_tables.feedback.add_row(
     Name = Name,
     Email = Email,
     Feedback = Feedback,
+    Likelihood = Likelihood,
     Created = datetime.now()
   )
   anvil.email.send(to = "Zak.Barwick@gmail.com",
@@ -21,4 +22,5 @@ def AddDetails(Name , Email , Feedback):
                   Name {Name}
                   Email: {Email}
                   Feedback:
-                  {Feedback}""")
+                  {Feedback}
+                  Likelihood to recommend: {Likelihood}""")
