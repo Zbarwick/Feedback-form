@@ -1,3 +1,4 @@
+import anvil.email
 import anvil.files
 from anvil.files import data_files
 import anvil.tables as tables
@@ -14,3 +15,10 @@ def AddDetails(Name , Email , Feedback):
     Feedback = Feedback,
     Created = datetime.now()
   )
+  anvil.email.send(to = "Zak.Barwick@gmail.com",
+                  text = f"""
+                  A new person has filled out the form!
+                  Name {Name}
+                  Email: {Email}
+                  Feedback:
+                  {Feedback}""")
